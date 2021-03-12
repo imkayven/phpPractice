@@ -1,0 +1,1 @@
+SELECT * FROM employees WHERE year( date_hired ) between 2017 and 2018

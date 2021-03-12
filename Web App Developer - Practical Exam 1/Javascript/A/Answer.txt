@@ -1,0 +1,33 @@
+<script type="text/javascript">
+str = "TheQuickBrownFoxJumpsOverTheLazyDog";
+str_length = str.length;
+
+var new_string = "";
+for(i = 0; i < str_length; i++) {
+  char = str.charCodeAt(i);
+  if(checkLowerCase(char) == true) {
+    alpha = str.charAt(i);
+  }
+  else {
+    alpha = String.fromCharCode(char);
+    alpha = " " + alpha;
+  }
+  new_string += alpha;
+}
+
+new_lowerstring = new_string.toLowerCase();
+rest = new_lowerstring.substr(2);
+firstletter = new_lowerstring.substr(0,2);
+new_firstletter = firstletter.toUpperCase();
+msg = new_firstletter + rest;
+alert(msg);
+
+function checkLowerCase(decimal) {
+  if(decimal >= 97 && decimal <= 122) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+</script>
